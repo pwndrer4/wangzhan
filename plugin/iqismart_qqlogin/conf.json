@@ -1,0 +1,12 @@
+{
+    "name": "免签QQ登录",
+    "brief": "无需备案即可接入QQ登录。由<a href='https://www.iqismart.com'>一起smart</a>永久稳定提供技术支持",
+    "version": "1.1",
+    "bbs_version": "4.0",
+    "installed": 1,
+    "enable": 1,
+    "hooks_rank": {
+        "my_profile_login_date_after.htm": 999
+    },
+    "dependencies": []
+}

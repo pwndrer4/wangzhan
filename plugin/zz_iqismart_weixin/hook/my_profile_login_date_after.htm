@@ -1,0 +1,39 @@
+<?php 
+$wxlogin = kv_get('iqismart_weixin');
+$user_agent = $_SERVER['HTTP_USER_AGENT']; 
+$is_weixin = strpos($user_agent, 'MicroMessenger');
+$bind_wx = db_find_one('iqismart_wx_login', array('uid'=>$uid));
+?>
+<br><span class="text-muted">微信状态：</span>
+<?php if (! empty($bind_wx)) {?>
+
+已绑定
+
+<?php if ($wxlogin['unbind'] == 1) {?>
+<a href='<?php echo url("wx_login-unbind") ?>' style="color:gray" >解绑</a>
+<?php } ?>
+
+<?php if ($wxlogin['wx_notice'] == 1) {?>
+<a href='javascript:void(0)' onclick='$("#followBtn").click()'>开启微信通知</a>
+<?php } ?>
+<?php }  else if (! empty($is_weixin)){?> 
+<a href='wx_login-bind-bind_user-auth.htm'>申请绑定</a>
+
+<?php if ($wxlogin['wx_notice'] == 1) {?>
+<a  style="color:gray" >绑定微信后可开启微信通知</a>
+<?php } ?>
+
+<?php } else { ?>
+<a href='javascript:void(0);' id="bind-weixin">申请绑定</a>
+
+<?php if ($wxlogin['wx_notice'] == 1) {?>
+<a  style="color:gray" >绑定微信后可开启微信通知</a>
+<?php } ?>
+
+<?php } ?>   
+
+<button id="followBtn" type="button" style="display:none" class="Button Button--grey Button--withIcon Button--withLabel"
+                                         
+                                        data-modal-url="<?php echo url("wx_follow_page");?>" data-modal-title="开启微信通知"  data-modal-size="lg" title="开启微信通知">
+                                开启微信通知
+                                </button>

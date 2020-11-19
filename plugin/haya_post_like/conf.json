@@ -1,0 +1,12 @@
+{
+    "name": "帖子点赞",
+    "brief": "对喜欢的帖子点赞及对喜欢的回复点赞。",
+    "version": "1.1.5",
+    "author": "deatil",
+    "id": "haya_post_like",
+    "bbs_version": "4.0.1",
+    "installed": 0,
+    "enable": 0,
+    "hooks_rank": [],
+    "dependencies": []
+}

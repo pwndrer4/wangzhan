@@ -1,0 +1,42 @@
+<?php include _include(APP_PATH.'view/htm/header.inc.htm');?>
+
+ 
+
+<div class="row">
+	<div class="col-lg-6 mx-auto">
+		 
+		<div class="card">
+			<div class="card-header">
+				公众号快速注册
+			</div>
+			<div class="card-body">
+				<form  method="post" id="form">
+				
+					<div style="margin:0 auto;text-align:center;">
+						<img src='https://iqismart.oss-cn-shanghai.aliyuncs.com/images/iqismart_wx5.png'/>
+					</div>
+					<div class="media">
+						<div>
+							 
+						</div>
+						<div class="media-body text-right">
+						 
+                          	<div style="display: inline;float: left;">
+                          		<span class='small mr-1' style="padding-right:1px;">扫码关注免验证自动完成注册，已关注？请:</span> 
+                              	<a  onclick='weixin_login()' target="_blank" title="扫码登录" class="text-muted">  <small style='position:relative;top:1px;'>扫码登录</small></a>
+                              	<span class='small mr-1' style='position:relative;top:1px;'></span>
+                          	</div>
+                             <a href="<?php echo url('user-create');?>" class="text-muted"><small>普通注册</small></a>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	 
+	</div>
+</div>
+ 
+<?php include _include(APP_PATH.'view/htm/footer.inc.htm');?>
+ 
+ 

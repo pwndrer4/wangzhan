@@ -1,0 +1,9 @@
+
+<script>
+var qq_unbind = $('#qq_unbind');
+
+qq_unbind.on('click',function () {
+    if(!window.confirm("确定取消绑定吗？")) return false;
+    window.location = xn.url('qq_login-unbind');
+})
+</script>

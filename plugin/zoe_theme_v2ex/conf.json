@@ -1,0 +1,10 @@
+{
+    "name": "仿v2ex主题",
+    "brief": "基于xiuno制作的仿v2ex主题www.moqu8.com",
+    "version": "1.0",
+    "bbs_version": "4.0",
+    "installed": 1,
+    "enable": 1,
+    "hooks_rank": [],
+    "dependencies": []
+}

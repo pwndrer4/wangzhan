@@ -1,0 +1,22 @@
+<ul class="nav nav-top" role="navigation" id="nav-top">
+	
+	<li class="nav-item"><a class="nav-link" fid="0" href=".">全部</a></li>	
+	
+	<?php foreach($forumlist_show as $_forum) { ?>
+	
+	<li class="nav-item">
+		<a class="nav-link" fid="<?php echo $_forum['fid'];?>" href="<?php echo url("forum-$_forum[fid]");?>"> <?php echo $_forum['name'];?></a>
+	</li>
+	
+	<?php } ?>
+	
+</ul>
+
+
+
+		
+
+
+ 
+
+

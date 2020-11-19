@@ -1,0 +1,10 @@
+{
+    "name": "免签微信接入",
+    "brief": "微信登陆、微信通知，不需注册公众号，由一起smart认证服务号提供云服务",
+    "version": "1.0.1",
+    "bbs_version": "4.0.0",
+    "installed": 1,
+    "enable": 1,
+    "hooks_rank": [],
+    "dependencies": []
+}

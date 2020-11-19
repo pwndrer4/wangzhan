@@ -1,0 +1,99 @@
+<?php include _include(ADMIN_PATH.'view/htm/header.inc.htm'); ?>
+
+<div class="row">
+	<div class="col-sm-12">
+		
+		<div class="card">
+			<div class="card-body">
+				<form action="<?php echo url('plugin-setting-haya_post_like');?>" method="post" id="formcreate">
+					<h4 class="card-title mb-3">帖子点赞设置</h4>
+					
+					<hr class="mb-4" />
+					
+					<div class="form-group row">
+						<label class="col-md-2 form-control-label text-md-right pr-0" for="open_thread">
+							帖子点赞：
+						</label>
+						<div class="col-md-8">
+							<select name="open_thread" id="open_thread" class="form-control">
+								<?php if ($config['open_thread'] == 1) { ?>
+									<option value="1" selected="selected">启用</option>
+									<option value="0">关闭</option>
+								<?php } else { ?>
+									<option value="1">启用</option>
+									<option value="0" selected="selected">关闭</option>
+								<?php } ?>
+							</select>
+							<div class="figure-caption mt-2">
+								启用对帖子主贴点赞功能。
+							</div>
+						</div>
+					</div>	
+					
+					<div class="form-group row mb-3">
+						<label class="col-md-2 form-control-label text-md-right pr-0" for="open_post">
+							回复点赞：
+						</label>
+						<div class="col-md-8">
+							<select name="open_post" id="open_post" class="form-control">
+								<?php if ($config['open_post'] == 0) { ?>
+									<option value="1">启用</option>
+									<option value="0" selected="selected">关闭</option>
+								<?php } else { ?>
+									<option value="1" selected="selected">启用</option>
+									<option value="0">关闭</option>
+								<?php } ?>
+							</select>
+							<div class="figure-caption mt-2">
+								启用对回复的点赞功能。
+							</div>
+						</div>
+					</div>	
+					
+					<div class="form-group row mb-3 mt-4">
+						<label class="col-md-2 form-control-label text-md-right pr-0" for="hot_like_post_low_count">
+							热门回复：
+						</label>
+						<div class="col-md-8">
+							<input type="text" name="hot_like_post_low_count" id="hot_like_post_low_count" value="<?php echo isset($config['hot_like_post_low_count']) ? intval($config['hot_like_post_low_count']) : 10; ?>" class="form-control">
+							<div class="figure-caption mt-2">
+								点赞多少次后可以认为是热门回复。
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group row mb-3 mt-4">
+						<label class="col-md-2 form-control-label text-md-right pr-0" for="hot_like_post_size">
+							热门回复数量：
+						</label>
+						<div class="col-md-8">
+							<input type="text" name="hot_like_post_size" id="hot_like_post_size" value="<?php echo isset($config['hot_like_post_size']) ? intval($config['hot_like_post_size']) : 5; ?>" class="form-control">
+							<div class="figure-caption mt-2">
+								热门回复的最大显示数量。
+							</div>
+						</div>
+					</div>					
+					
+					<div class="form-group row mb-3">
+						<label class="col-md-2 form-control-label"></label>
+						<div class="col-md-2">
+							<button type="submit" class="btn btn-primary btn-block mr-2 mb-2" id="submit">确认</button>
+						</div>
+						<div class="col-md-2">
+							<a role="button" class="btn btn-secondary btn-block mb-2" href="javascript:history.back();">返回</a>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php
+include _include(ADMIN_PATH.'view/htm/footer.inc.htm');
+?>
+
+<script>
+$('#nav li.nav-item-plugin').addClass('active');
+</script>
